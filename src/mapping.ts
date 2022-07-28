@@ -87,6 +87,9 @@ export function handleItemListed(event: ItemListedEvent): void {
   activeItem.nftAddress = event.params.nftAddress;
   activeItem.tokenId = event.params.tokenId;
   activeItem.price = event.params.price;
+  activeItem.buyer = Address.fromString(
+    "0x0000000000000000000000000000000000000000"
+  );
 
   itemListed.save();
   activeItem.save();
