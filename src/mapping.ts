@@ -83,13 +83,13 @@ export function handleItemListed(event: ItemListedEvent): void {
   itemListed.nftAddress = event.params.nftAddress;
   itemListed.price = event.params.price;
 
-  activeItem!.seller = event.params.seller;
-  activeItem!.nftAddress = event.params.nftAddress;
-  activeItem!.tokenId = event.params.tokenId;
-  activeItem!.price = event.params.price;
+  activeItem.seller = event.params.seller;
+  activeItem.nftAddress = event.params.nftAddress;
+  activeItem.tokenId = event.params.tokenId;
+  activeItem.price = event.params.price;
 
   itemListed.save();
-  activeItem!.save();
+  activeItem.save();
 }
 
 function getIdFromEventParams(tokenId: BigInt, nftAddress: Address): string {
