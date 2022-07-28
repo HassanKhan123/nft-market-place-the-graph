@@ -26,4 +26,4 @@ dataSources:
           handler: handleItemCancelled
         - event: ItemListed(indexed address,indexed address,indexed uint256,uint256)
           handler: handleItemListed
-      file: ./src/nft-market-place.ts
+      file: ./src/mapping.ts
